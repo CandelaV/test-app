@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: cvidal/test-app:latest
+  repository: candelav/test-app:latest
   pullPolicy: Always
 
 
