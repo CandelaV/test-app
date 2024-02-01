@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: candelav/test-app:latest
+  repository: candelav/test-app:monitoring.v1
   pullPolicy: Always
 
 

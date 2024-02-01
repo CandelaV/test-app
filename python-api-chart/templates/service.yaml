@@ -3,12 +3,16 @@ kind: Service
 metadata:
   name: {{.Values.application.name}}
   labels:
+    job: api-service # added for prometheus servicemonitor
+    app: {{.Values.application.name}}
     run: {{.Values.application.name}}
 spec:
   ports:
-  - port: 8080
+  - name: web
+    port: 8080
     protocol: TCP
+    targetPort: 8000
   selector:
     app: {{.Values.application.name}}
-  type: LoadBalancer
+  type: NodePort
 
